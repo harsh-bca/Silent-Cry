@@ -24,3 +24,17 @@ This API lets verified NGOs, psychologists, or child safety authorities connect 
 curl -X POST https://api.silentcry.in/auth \
   -H "Content-Type: application/json" \
   -d '{"api_key": "your_api_key"}'
+POST /complaint
+
+Payload:
+{
+  "type": "voice" | "text",
+  "content": "...",
+  "language": "en" | "hi",
+  "timestamp": "...",
+  "device_id": "anonymized"
+}
+POST /complaint
+
+
+
