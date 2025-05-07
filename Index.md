@@ -5,8 +5,8 @@ language_tabs:
   - python
   - javascript
 toc_footers:
-  - <a href='mailto:contact@silentcry.in'>Contact Support</a>
-  - <a href='https://github.com/yourusername/silentcry'>View on GitHub</a>
+  - <a href='mailto:contact@silent-cry.in'>Contact Support</a>
+  - <a href='https://github.com/harsh-bca/silent-cry'>View on GitHub</a>
 includes:
   - errors
 search: true
@@ -34,7 +34,18 @@ Payload:
   "timestamp": "...",
   "device_id": "anonymized"
 }
-POST /complaint
+# POST /api/v1/report
+curl -X POST https://api.silentcry.in/api/v1/report \
+  -H "Authorization: Bearer your_token" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "reporter_id": "12345",
+    "incident_type": "physical_abuse",
+    "incident_details": "Details about the incident",
+    "location": "City, Country"
+  }'
+
+
 
 
 
